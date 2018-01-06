@@ -1,11 +1,11 @@
 import SwiftSideMenu
 
-protocol MenuPresenter {
+public protocol MenuPresenter {
     func presentMenu(view: UIView)
     func dismissMenu(view: UIView)
 }
 
-extension MenuPresenter where Self: UIView {
+public extension MenuPresenter where Self: UIView {
     func presentMenu(view: UIView, screenEdge: SideMenuScreenEdge) {
         SideMenuViewAnimation
             .animateTransition(baseView: self, menuView: view, screenEdge: screenEdge, direction: .present)
@@ -17,7 +17,7 @@ extension MenuPresenter where Self: UIView {
     }
 }
 
-extension MenuPresenter where Self: UIViewController {
+public extension MenuPresenter where Self: UIViewController {
     func presentMenu(view: UIView, screenEdge: SideMenuScreenEdge) {
         SideMenuViewAnimation
             .animateTransition(baseView: self.view, menuView: view, screenEdge: screenEdge, direction: .present)
