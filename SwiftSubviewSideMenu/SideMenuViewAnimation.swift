@@ -8,18 +8,15 @@ public class SideMenuViewAnimation {
         screenEdge: SideMenuScreenEdge,
         direction: TransitionDirection,
         transitionDuration: Double = 0.3) {
-        let homeView = direction == .present ? baseView : menuView
-        let menuView = direction == .present ? menuView : baseView
-
         screenEdge
-            .setPositionBeforeAnimation(fromView: homeView, toView: menuView, direction: direction)
+            .setPositionBeforeAnimation(fromView: baseView, toView: menuView, direction: direction)
 
         UIView.animate(
             withDuration: transitionDuration,
             animations: {
                 screenEdge
                     .setPositionAfterAnimation(
-                        fromView: homeView,
+                        fromView: baseView,
                         toView: menuView,
                         direction: direction
                 )
