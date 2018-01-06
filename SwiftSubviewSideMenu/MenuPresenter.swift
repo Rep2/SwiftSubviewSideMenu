@@ -1,8 +1,8 @@
 import SwiftSideMenu
 
 public protocol MenuPresenter {
-    func presentMenu(view: UIView)
-    func dismissMenu(view: UIView)
+    func presentMenu(view: UIView, screenEdge: SideMenuScreenEdge)
+    func dismissMenu(view: UIView, screenEdge: SideMenuScreenEdge)
 }
 
 public extension MenuPresenter where Self: UIView {
