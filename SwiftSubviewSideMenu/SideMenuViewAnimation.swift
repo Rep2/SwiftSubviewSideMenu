@@ -11,8 +11,7 @@ public class SideMenuViewAnimation {
         let homeView = direction == .present ? baseView : menuView
         let menuView = direction == .present ? menuView : baseView
 
-        screenEdge
-            .addSubviews(fromView: homeView, toView: menuView, containerView: homeView)
+        homeView.addSubview(menuView)
         screenEdge
             .setPositionBeforeAnimation(fromView: homeView, toView: menuView, direction: direction)
 
