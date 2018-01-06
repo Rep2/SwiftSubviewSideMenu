@@ -1,0 +1,3 @@
+[submodule "Carthage/Checkouts/SwiftSideMenu"]
+	path = Carthage/Checkouts/SwiftSideMenu
+	url = https://github.com/Rep2/SwiftSideMenu.git

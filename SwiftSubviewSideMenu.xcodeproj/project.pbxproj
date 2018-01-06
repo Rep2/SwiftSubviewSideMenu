@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		F6503AF92000C78E00FE8E14 /* SwiftSubviewSideMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6503AEF2000C78D00FE8E14 /* SwiftSubviewSideMenu.framework */; };
-		F6503AFE2000C78E00FE8E14 /* SwiftSubviewSideMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6503AFD2000C78E00FE8E14 /* SwiftSubviewSideMenuTests.swift */; };
 		F6503B002000C78E00FE8E14 /* SwiftSubviewSideMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = F6503AF22000C78E00FE8E14 /* SwiftSubviewSideMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6503B0C2000C92400FE8E14 /* SwiftSideMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6503B0B2000C92400FE8E14 /* SwiftSideMenu.framework */; };
+		F6503B0E2000C9C900FE8E14 /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6503B0D2000C9C900FE8E14 /* MenuPresenter.swift */; };
+		F6503B112000CB6B00FE8E14 /* SideMenuViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6503B102000CB6B00FE8E14 /* SideMenuViewAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +29,10 @@
 		F6503AF22000C78E00FE8E14 /* SwiftSubviewSideMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftSubviewSideMenu.h; sourceTree = "<group>"; };
 		F6503AF32000C78E00FE8E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6503AF82000C78E00FE8E14 /* SwiftSubviewSideMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSubviewSideMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6503AFD2000C78E00FE8E14 /* SwiftSubviewSideMenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSubviewSideMenuTests.swift; sourceTree = "<group>"; };
 		F6503AFF2000C78E00FE8E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6503B0B2000C92400FE8E14 /* SwiftSideMenu.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSideMenu.framework; path = Carthage/Build/iOS/SwiftSideMenu.framework; sourceTree = "<group>"; };
+		F6503B0D2000C9C900FE8E14 /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
+		F6503B102000CB6B00FE8E14 /* SideMenuViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6503B0C2000C92400FE8E14 /* SwiftSideMenu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +61,7 @@
 				F6503AF12000C78D00FE8E14 /* SwiftSubviewSideMenu */,
 				F6503AFC2000C78E00FE8E14 /* SwiftSubviewSideMenuTests */,
 				F6503AF02000C78D00FE8E14 /* Products */,
+				F6503B0A2000C92400FE8E14 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +79,8 @@
 			children = (
 				F6503AF22000C78E00FE8E14 /* SwiftSubviewSideMenu.h */,
 				F6503AF32000C78E00FE8E14 /* Info.plist */,
+				F6503B0D2000C9C900FE8E14 /* MenuPresenter.swift */,
+				F6503B102000CB6B00FE8E14 /* SideMenuViewAnimation.swift */,
 			);
 			path = SwiftSubviewSideMenu;
 			sourceTree = "<group>";
@@ -80,10 +88,17 @@
 		F6503AFC2000C78E00FE8E14 /* SwiftSubviewSideMenuTests */ = {
 			isa = PBXGroup;
 			children = (
-				F6503AFD2000C78E00FE8E14 /* SwiftSubviewSideMenuTests.swift */,
 				F6503AFF2000C78E00FE8E14 /* Info.plist */,
 			);
 			path = SwiftSubviewSideMenuTests;
+			sourceTree = "<group>";
+		};
+		F6503B0A2000C92400FE8E14 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6503B0B2000C92400FE8E14 /* SwiftSideMenu.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,6 +123,7 @@
 				F6503AEB2000C78D00FE8E14 /* Frameworks */,
 				F6503AEC2000C78D00FE8E14 /* Headers */,
 				F6503AED2000C78D00FE8E14 /* Resources */,
+				F6503B092000C7EC00FE8E14 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -148,6 +164,7 @@
 				TargetAttributes = {
 					F6503AEE2000C78D00FE8E14 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					F6503AF72000C78E00FE8E14 = {
@@ -191,11 +208,30 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F6503B092000C7EC00FE8E14 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F6503AEA2000C78D00FE8E14 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6503B0E2000C9C900FE8E14 /* MenuPresenter.swift in Sources */,
+				F6503B112000CB6B00FE8E14 /* SideMenuViewAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +239,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6503AFE2000C78E00FE8E14 /* SwiftSubviewSideMenuTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +369,7 @@
 		F6503B042000C78E00FE8E14 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -341,12 +377,17 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SwiftSubviewSideMenu/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rep.SwiftSubviewSideMenu;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -355,6 +396,7 @@
 		F6503B052000C78E00FE8E14 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -362,6 +404,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SwiftSubviewSideMenu/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -376,6 +422,7 @@
 		F6503B072000C78E00FE8E14 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MDX989Y6D8;
 				INFOPLIST_FILE = SwiftSubviewSideMenuTests/Info.plist;
@@ -390,6 +437,7 @@
 		F6503B082000C78E00FE8E14 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MDX989Y6D8;
 				INFOPLIST_FILE = SwiftSubviewSideMenuTests/Info.plist;
