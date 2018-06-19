@@ -1,1 +1,2 @@
-github "Rep2/SwiftSideMenu"
+git "file:///Users/ivanrep/Projects/SwiftSideMenu" "master"
+#github "Rep2/SwiftSideMenu"
